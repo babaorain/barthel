@@ -247,21 +247,13 @@
             classification = "Independent";
         }
 
-        // 構建結果字串
+        // 構建新的結果格式
         var resultText = `
-        <div>Total Score: ${totalScore} - ${classification}</div>
-        <div style="font-size: 18px; margin-top: 15px;">
-            <div>Feeding: ${feeding}</div>
-            <div>Bathing: ${bathing}</div>
-            <div>Grooming: ${grooming}</div>
-            <div>Dressing: ${dressing}</div>
-            <div>Bowel: ${bowels}</div>
-            <div>Bladder: ${bladder}</div>
-            <div>Toilet: ${toilet}</div>
-            <div>Transfer: ${transfers}</div>
-            <div>Walking: ${mobility}</div>
-            <div>Stairs: ${stairs}</div>
-        </div>
+            <p>BARTHEL INDEX</p>
+            <p>&nbsp;Feeding&nbsp; ${feeding}/10&nbsp; &nbsp;&nbsp;Grooming ${grooming}/5&nbsp; &nbsp; Dressing ${dressing}/10&nbsp; &nbsp;&nbsp; Bathing&nbsp; ${bathing}/5</p>
+            <p>&nbsp;Toilet&nbsp; &nbsp;${toilet}/10&nbsp; &nbsp; &nbsp;Bowel&nbsp; &nbsp;${bowels}/10&nbsp; &nbsp;Bladder&nbsp; ${bladder}/10&nbsp; &nbsp; Walking&nbsp; ${mobility}/15&nbsp; &nbsp;</p>
+            <p>&nbsp;Transfer ${transfers}/15&nbsp; &nbsp;&nbsp;Stairs&nbsp; &nbsp;${stairs}/10&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+            <p>&nbsp;Total: ${totalScore}&nbsp; ==＞ ${classification}</p>
         `;
 
         // 顯示結果
